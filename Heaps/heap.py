@@ -52,27 +52,34 @@ def max_heapify(heap: list, num: int, index: int):
         max_heapify(heap, num, largest)
 
 
-def max_delete(heap: list, num: int) -> list:
+def max_delete(heap: list, num: int) -> int:
 
+    root = heap[0]
     heap[0] = heap[num - 1]
-    num = num - 1
+    num -= num
+    heap.pop()
     max_heapify(heap, num, 0)
-    
-    return heap[:-1]
+
+    return root
 
 
-def min_delete(heap: list, num: int) -> list:
+def min_delete(heap: list, num: int) -> int:
 
+    root = heap[0]
     heap[0] = heap[num - 1]
-    num = num - 1
+    num -= num
+    heap.pop()
     min_heapify(heap, num, 0)
-    
-    return heap[:-1]
+
+    return root
 
 
-def insert():
+def max_insert():
     pass
 
+
+def min_insert():
+    pass
 
 def build_min_heap(heap: list, num: int):
     
