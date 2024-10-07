@@ -13,7 +13,7 @@ Space complexity:   O(N)
 
 from collections import deque
 
-def BFS(adjacency_list, start):
+def bfs(adjacency_list: list, start: int):
 
     # Create a queue
     queue = deque()
@@ -50,4 +50,4 @@ if __name__ == '__main__':
              6: [2, 3]}
 
     print("BFS traversal: ")
-    BFS(graph, 0)
+    bfs(graph, 0)

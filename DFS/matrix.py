@@ -13,7 +13,7 @@ Space complexity:   O(N)
 
 from collections import deque
 
-def DFS(adjacency_matrix, start):
+def dfs(adjacency_matrix: list, start: int):
 
     # Create a stack
     stack = deque()
@@ -50,4 +50,4 @@ if __name__ == '__main__':
               [0, 0, 1, 1, 0, 0, 0]]
 
     print("DFS traversal: ")
-    DFS(matrix, 0)
+    dfs(matrix, 0)

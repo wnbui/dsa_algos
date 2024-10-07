@@ -13,7 +13,7 @@ Space complexity:   O(N)
 
 from collections import deque
 
-def BFS(adjacency_matrix, start):
+def bfs(adjacency_matrix: list, start: int):
 
     # Create a queue
     queue = deque()
@@ -50,4 +50,4 @@ if __name__ == '__main__':
               [0, 0, 1, 1, 0, 0, 0]]
 
     print("BFS traversal: ")
-    BFS(matrix, 0)
+    bfs(matrix, 0)
