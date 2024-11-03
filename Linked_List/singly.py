@@ -1,7 +1,7 @@
 class Node:
-    def __init__(self, value, next_node = None):
+    def __init__(self, value, next = None):
         self.value = value
-        self.next = next_node
+        self.next = next
 
 
 def convert_to_list(array):
@@ -28,14 +28,14 @@ def reverse_list(head):
 def insert(num: int):
     pass
 
-def delete(head: Node, num: int):
+def delete(head: Node, value: int):
     # Case of empty list
     if head is None:
         return head
     
     # Case of first node
     current = head
-    if current.value == num:
+    if current.value == value:
         temp = current
         current = current.next
         del temp
@@ -48,7 +48,7 @@ def delete(head: Node, num: int):
 
     while current is not None:
         # If the value is found
-        if current.value == num:
+        if current.value == value:
             # From current, connect previous node to next node
             temp = current
             previous.next = current.next
