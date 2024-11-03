@@ -1,8 +1,8 @@
 class Node:
-    def __init__(self, data, next_node=None, prev_node=None):
-        self.data = data
-        self.prev = prev_node
-        self.next = next_node
+    def __init__(self, value, next=None, prev=None):
+        self.value = value
+        self.prev = prev
+        self.next = next
 
 
 def convert_to_list(array):
@@ -21,7 +21,7 @@ def convert_to_list(array):
 def print_list(head):
     curr = head
     while curr is not None:
-        print(curr.data, end=" ")
+        print(curr.value, end=" ")
         curr = curr.next
     print()
 
