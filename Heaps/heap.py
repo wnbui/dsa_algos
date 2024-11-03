@@ -56,7 +56,7 @@ def max_delete(heap: list, num: int) -> int:
 
     root = heap[0]
     heap[0] = heap[num - 1]
-    num -= num
+    num -= 1
     heap.pop()
     max_heapify(heap, num, 0)
 
@@ -67,19 +67,27 @@ def min_delete(heap: list, num: int) -> int:
 
     root = heap[0]
     heap[0] = heap[num - 1]
-    num -= num
+    num -= 1
     heap.pop()
     min_heapify(heap, num, 0)
 
     return root
 
 
-def max_insert():
-    pass
+def max_insert(heap: list, num: int):
+    
+    heap.append(num)
+    print(len(heap))
+    size = len(heap)
+    max_heapify(heap, size, 0)
 
 
-def min_insert():
-    pass
+def min_insert(heap: list, num: int):
+
+    heap.append(num)
+    size = len(heap)
+    min_heapify(heap, size, 0)
+
 
 def build_min_heap(heap: list, num: int):
     
@@ -102,13 +110,14 @@ if __name__ == '__main__':
     arr = [27, 17, 3, 16, 13, 10, 1, 5, 7, 12, 4, 8, 9]
     n = len(arr)
 
-    arr2 = [1, 3, 5, 4, 6, 13, 10, 9, 8, 15, 17]
+    arr2 = [10, 5, 3, 2, 4]
     n2 = len(arr2)
 
-    arr3 = min_delete(arr2, n2)
+    # arr3 = min_delete(arr2, n2)
 
     # build_min_heap(arr, n)
     # build_max_heap(arr2, n2)
 
+    max_insert(arr2, 15)
     print(arr2)
-    print(arr3)
+    #print(arr3)
