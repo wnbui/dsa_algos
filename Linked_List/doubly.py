@@ -49,11 +49,11 @@ def reverse_list(head):
     return previous.prev
 
 
-def insert(num: int):
+def insert(value: int):
     pass
 
 
-def delete(num: int):
+def delete(value: int):
     pass
 
 

@@ -25,7 +25,7 @@ def print_list(head):
 def reverse_list(head):
     pass
 
-def insert(num: int):
+def insert(value: int):
     pass
 
 def delete(head: Node, value: int):
