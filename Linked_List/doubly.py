@@ -6,7 +6,6 @@ class Node:
 
 
 def convert_to_list(array):
-
     head = Node(array[0])
     prev = head
 
@@ -53,7 +52,7 @@ def insert(value: int):
     pass
 
 
-def delete(value: int):
+def remove(value: int):
     pass
 
 

@@ -15,6 +15,7 @@ def convert_to_list(array):
 
     return head
 
+
 def print_list(head):
     curr = head
     while curr is not None:
@@ -22,13 +23,19 @@ def print_list(head):
         curr = curr.next
     print()
 
+
 def reverse_list(head):
     pass
 
-def insert(value: int):
+
+def insertHead(value: int):
     pass
 
-def delete(head: Node, value: int):
+
+def insertTail(value: int):
+    pass
+
+def remove(head: Node, value: int):
     # Case of empty list
     if head is None:
         return head
@@ -62,6 +69,10 @@ def delete(head: Node, value: int):
     return head
 
 
+def getValues(head: Node) -> list:
+    pass
+
+
 if __name__ == "__main__":
     
     array = [0, 1, 2, 3, 4, 5]
@@ -71,6 +82,6 @@ if __name__ == "__main__":
     print("Original Linked List: ", end="")
     print_list(head)
 
-    head = delete(head, 2)
+    head = remove(head, 2)
 
     print_list(head)
