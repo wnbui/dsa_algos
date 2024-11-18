@@ -1,3 +1,8 @@
+"""
+Merge sort passing only an array.
+Returns array.
+"""
+
 def merge(left: list[int], right: list[int]) -> list[int]:
     sorted_arr = []
     i = j = 0
@@ -16,28 +21,6 @@ def merge(left: list[int], right: list[int]) -> list[int]:
     sorted_arr.extend(right[j:])
     
     return sorted_arr
-
-
-def count_inversions(array: list[int]) -> int:
-    mid = len(array) // 2
-    left = array[:mid]
-    right = array[mid:]
-    i = j = 0
-    inversions = 0
-
-    # Merge to arrays while maintaining ascending order
-    while i < len(left) and j < len(right):
-        if left[i] < right[j]:
-            i += 1
-        else:
-            j += 1
-            inversions += 1
-            
-    # Append any remaining elements in left or right halves
-    # sorted_arr.extend(left[i:])
-    # sorted_arr.extend(right[j:])
-    
-    return inversions
 
 
 def merge_sort(array: list[int]):
@@ -60,5 +43,5 @@ if __name__ == "__main__":
 
     print(merge_sort(array1))
     print(merge_sort(array2))
-    print(count_inversions(array1))
-    print(count_inversions(array2))
+    # print(count_inversions(array1))
+    # print(count_inversions(array2))
