@@ -18,6 +18,28 @@ def merge(left: list[int], right: list[int]) -> list[int]:
     return sorted_arr
 
 
+def count_inversions(array: list[int]) -> int:
+    mid = len(array) // 2
+    left = array[:mid]
+    right = array[mid:]
+    i = j = 0
+    inversions = 0
+
+    # Merge to arrays while maintaining ascending order
+    while i < len(left) and j < len(right):
+        if left[i] < right[j]:
+            i += 1
+        else:
+            j += 1
+            inversions += 1
+            
+    # Append any remaining elements in left or right halves
+    # sorted_arr.extend(left[i:])
+    # sorted_arr.extend(right[j:])
+    
+    return inversions
+
+
 def merge_sort(array: list[int]):
     # Base case: array of length 1
     if len(array) == 1:
@@ -33,6 +55,10 @@ def merge_sort(array: list[int]):
 
 
 if __name__ == "__main__":
-    array = [1, 4, 5, 6, 5, 3, 5, 7, 2]
+    array1 = [1, 4, 5, 6, 5, 3, 5, 7, 2]
+    array2 = [2, 4, 1, 3, 5]
 
-    print(merge_sort(array))
+    print(merge_sort(array1))
+    print(merge_sort(array2))
+    print(count_inversions(array1))
+    print(count_inversions(array2))
