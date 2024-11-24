@@ -10,7 +10,7 @@ def pivoted_search(array: list[int], value) -> int:
             return mid
         # If left half is sorted
         if array[mid] >= array[left]:
-            if array[left] <= value and array[mid]:
+            if array[left] <= value and value < array[mid]:
                 right = mid -1
             else:
                 left = mid + 1
@@ -26,7 +26,6 @@ def pivoted_search(array: list[int], value) -> int:
 
 
 if __name__ == "__main__":
-    # Driver code
     arr1 = [4, 5, 6, 7, 0, 1, 2]
     key1 = 0
     result1 = pivoted_search(arr1, key1)
